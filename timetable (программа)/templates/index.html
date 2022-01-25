@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Расписание</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript" src="{{ url_for('static', filename='jquery_min.js')}}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='TBMessage.js')}}"></script>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='TBMessage.css')}}">
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='index.css')}}">
+	<script type="text/javascript" src="{{ url_for('static', filename='index.js')}}"></script>
+</head>
+<body>
+	<div style="display: flex; height: 100%;">
+		<div class="Main">
+			<div class="Tables">
+				
+			</div>
+			<div dayindicator>
+				<div day="1">Пн</div>
+				<div day="2">Вт</div>
+				<div day="3">Ср</div>
+				<div day="4">Чт</div>
+				<div day="5">Пт</div>
+				<div day="6">Сб</div>
+				<div day="0">Вс</div>
+			</div>
+		</div>
+		<div class="Widgets">
+			<div class="TimeDateWeather" style="display: flex;">
+				<div class="Temperature">
+					Сейчас за окном <span t_now>--</span> °C<br>
+					Ветер <span wind>--</span> м/с
+					<br><br>
+					<div author>Designed by SKAT45</div>
+				</div>
+				<div class="TimeDate"><span time>--:--</span><br><span date>-- --.--.----</span></div>
+			</div>
+			<!-- <div style="border-top: solid 0.05em black;"></div> -->
+			<div id="birthdats_div" block></div>
+		</div>
+	</div>
+</body>
+</html>

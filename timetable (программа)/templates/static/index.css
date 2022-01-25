@@ -1,0 +1,174 @@
+:root {
+	--first-color: #fef2e4; /*FBEEC1*/ 
+	--second-color: #805a3b; /*BC986A*/
+	--third-color: #c60000; /*8D8741*/
+}
+
+body {
+	margin: 0;
+	font-family: arial, "Comic Sans MS", cursive, sans-serif;
+}
+
+.Main {
+	width: 78%;
+	height: 100%;
+	background: var(--first-color);
+}
+
+.Tables {
+	height: 97%;
+}
+
+.Tables div[class_num] {
+	text-align: center;
+	font-weight: 700;
+	font-size: 1.7em;
+}
+
+.NoLessons {
+	font-size: 4em;
+	text-align: center;
+	color: var(--third-color);
+}
+
+.Tables table {
+	width: 98%;
+	margin: 0 auto;
+}
+
+.Tables table tr td {
+	border-radius: 0.3em;
+}
+
+.Tables table tr td:nth-child(4n+2), .Tables table tr td:nth-child(4n+3) {
+	background: rgba(0,0,0,.4);
+}
+
+.Tables table tr td:nth-child(4n+4), .Tables table tr td:nth-child(4n+5) {
+	background: rgba(0,0,0,.2);
+}
+
+.Tables table tr td:nth-child(1)/*, .Tables table tr td[classtitle], .Tables table tr td[roomtitle]*/ {
+	background-color: var(--second-color);
+}
+
+.Tables table tr td[classtitle] {
+	font-weight: 700;
+	background-color: var(--second-color);
+}
+
+.Tables table tr td[roomtitle] {
+	background-color: var(--second-color);
+}
+
+.Tables table tr:nth-child(1) td:nth-child(1) {
+	/*background-color: var(--first-color);*/
+}
+
+td {
+	text-align: center;
+}
+
+span[not_const_tt] {
+	color: var(--third-color);
+}
+
+.Main div[dayindicator] {
+	height: 3%;
+	margin: 0 auto;
+	width: 60%;
+	display: flex;
+}
+
+.Main div[dayindicator] div {
+	margin: 0 auto;
+	color: var(--second-color);
+}
+
+.Main div[dayindicator] div[active] {
+	color: black;
+	font-size: 1.5em;
+	font-weight: 550;
+	margin-top: -0.3em;
+}
+
+.Widgets {
+	width: 22%;
+	height: 100%;
+	background: var(--second-color);
+	border-left: solid 0.1em black;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+
+.Widgets div[block] {
+	background: rgba(0,0,0,.2);
+	margin-top: 0.2em;
+	border-radius: 0.7em;
+	padding: 0.3em;
+	/*color: var(--second-color);*/
+}
+
+.TimeDateWeather {
+	background: rgba(0,0,0,.2);
+	margin-top: 0.2em;
+	border-radius: 0.7em;
+	padding: 0.3em;
+	border: solid 0.2em black;
+}
+
+.Temperature {
+	margin-left: 0;
+	margin-right: auto;
+}
+
+.TimeDate {
+	margin-left: auto;
+	margin-right: 0;
+	text-align: right;
+}
+
+.TimeDate span[time] {
+	font-size: 3em;
+}
+
+.TimeDate span[date] {
+	font-size: 1em;
+}
+
+#birthdats_div div[h] {
+	margin-top: 0.5em;
+	font-size: 1.1em;
+	font-weight: 300;
+}
+
+.Person {
+	display: flex;
+	margin-bottom: 1em;
+}
+
+.Person .NameDesc {
+	font-size: 1.2em;
+	margin-right: auto;
+	margin-left: 0;
+}
+
+.Person img {
+	height: 4em;
+	width: 4em;
+	border-radius: 0.1em;
+	margin-right: 0;
+	margin-left: auto;
+	border-radius: 0.3em;
+}
+
+.Person div[name] {
+	font-size: 0.78em;
+	margin-top: 0.3em;
+	font-weight: 550;
+}
+
+
+.Person div[persondesctiption] {
+	font-size: 0.6em;
+}

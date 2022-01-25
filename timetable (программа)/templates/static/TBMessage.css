@@ -1,0 +1,73 @@
+:root {
+	--msg-font-size: 1.6em;
+	--distance-between-messages: 0.25em;
+	--padding: 0.8em 1.2em;
+	--radius: 0.7em;
+	--color-border-width: 0.6em;
+	--distance-from-X-to-MSGtext: 0.4em;
+}
+
+.Message {
+	margin-top: var(--distance-between-messages);
+	display: flex;
+	padding: var(--padding);
+	background-color: rgb(248, 249, 250);
+	border: solid 1px black;
+	top: 0;
+	font-size: var(--msg-font-size);
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+.Message[msgType='inf'][lr='l'] {
+	border-left-color: rgb(0, 123, 225);
+	border-left-width: var(--color-border-width);
+	border-radius: 0 var(--radius) var(--radius) 0;
+}
+.Message[msgType='dang'][lr='l'] {
+	border-left-color: rgb(220, 53, 69);
+	border-left-width: var(--color-border-width);
+	border-radius: 0 var(--radius) var(--radius) 0;
+}
+.Message[msgType='done'][lr='l'] {
+	border-left-color: rgb(40, 167, 69);
+	border-left-width: var(--color-border-width);
+	border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.Message[msgType='inf'][lr='r'] {
+	border-right-color: rgb(0, 123, 225);
+	border-right-width: var(--color-border-width);
+	border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.Message[msgType='dang'][lr='r'] {
+	border-right-color: rgb(220, 53, 69);
+	border-right-width: var(--color-border-width);
+	border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.Message[msgType='done'][lr='r'] {
+	border-right-color: rgb(40, 167, 69);
+	border-right-width: var(--color-border-width);
+	border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.Message[lr='l'] .x {
+	margin-right: 0;
+	margin-left: var(--distance-from-X-to-MSGtext);
+}
+
+.Message[lr='r'] .x {
+	margin-right: var(--distance-from-X-to-MSGtext);
+	margin-left: 0;
+}
+
+.Message .x {
+	color: red;
+	cursor: pointer;
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+}
